@@ -1,19 +1,29 @@
-import Image from "next/image";
+import { ArtefatoCard } from "../src/components/ArtefatoCard";
+import { artefatosMock  } from "../src/data/artefatos";
+
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-zinc-100 flex items-center justify-center">
-      <div className="border border-zinc-700 p-6 max-w-md">
-        <h1 className="text-2xl font-bold mb-4">AZN</h1>
+    <main className="min-h-screen bg-black text-zinc-100">
+      <header className="border-b border-zinc-800">
+        <div className="mx-auto max-w-6xl px-4 py-10">
+          <p className="font-mono text-xs tracking-widest text-zinc-500 uppercase">
+            Arquivo Zona Null · índice
+          </p>
+          <h1 className="mt-4 text-4xl md:text-6xl font-semibold leading-[0.95]">
+            AZN
+          </h1>
+          <p className="mt-5 max-w-2xl text-sm text-zinc-400">
+            Um arquivo editorial de artefatos: manifestos, ruínas e sinais.
+          </p>
+        </div>
+      </header>
 
-        <p className="text-sm text-zinc-400 mb-4">
-          Toda tecnologia esquecida retorna como ruína.
-        </p>
-
-        <button className="border border-zinc-600 px-4 py-2 hover:bg-zinc-800">
-          Manifestar artefato
-        </button>
-      </div>
+      <section className="mx-auto max-w-6xl px-4 py-10 space-y-4">
+        {artefatosMock.map((a) => (
+          <ArtefatoCard key={a.id} artefato={a} />
+        ))}
+      </section>
     </main>
   );
 }
