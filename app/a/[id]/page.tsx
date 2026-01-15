@@ -1,21 +1,28 @@
-"use client";
-import { artefatosMock } from "@/src/data/artefatos";
+"use client"; //NEXT.JS(app router) marca esse arquivo como client component - BROWSER  - usar quando quiser UseState() ou OnClick() interatividades no geral
+import { artefatosMock } from "@/src/data/artefatos"; //importa um array de artefatos mockados
 import { podeArquivar, podeCorromper, podeManifestar } from "@/src/domain/regrasArtefato";
-import { useState } from "react";
+import { useState } from "react"; //importa o useState que é responsável por criar memória reativa dentro do componente (por exemplo mudar o artefato sem ter que recarregar a página
+//“Sem useState, nada muda ao vivo. Com useState, o estado vira imagem.”)
+import { useParams } from "next/navigation";
 
 
-export default function ArtefatoPage({ params }: { params: { id: string } }) {
 
-  const original = artefatosMock.find((a) => a.id === params.id);
-  const [artefato, setArtefato] = useState(original);
-  const [erro, setErro] = useState<string | null>(null); //useState é um recipiente de memória do React.
+export default function ArtefatoPage({ params }: { params: { id: string } }) { //os params vem de next.js (app router). O next injeta params baseado no ID 
 
-  if (!artefato) return null;
+  const { id } = useParams<{ id: string }>();
+  const original = artefatosMock.find((a) => a.id === id); //javascript puro buscando o artefato pelo id do params (URL)
+  const [artefato, setArtefato] = useState(original); //useState é um recipiente de memória do React.
+  const [erro, setErro] = useState<string | null>(null); //typescript + react  / guarda um mensagem de erro ou nada 
+
+  console.log(id)
+  console.log(artefatosMock)
+  console.log(original)
+  console.log(artefato);
 
 
-  if (!artefato) {
+  if (!artefato) { //se não encontrar o artefato (ou seja null)
     return (
-      <main className="min-h-screen bg-black text-zinc-100 flex items-center justify-center">
+      <main className="min-h-screen bg-black text-zinc-100 flex items-center justify-center"> 
         <p className="font-mono text-sm text-zinc-500">ARTEFATO NÃO ENCONTRADO</p>
       </main>
     );
