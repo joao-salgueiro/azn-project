@@ -1,0 +1,14 @@
+/home/archlinuxjp/Projects/azn-project/api/target/debug/deps/thiserror-62e0fa765ea3bd10.d: /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs /home/archlinuxjp/Projects/azn-project/api/target/debug/build/thiserror-7399ea59ce3845b2/out/private.rs
+
+/home/archlinuxjp/Projects/azn-project/api/target/debug/deps/libthiserror-62e0fa765ea3bd10.rlib: /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs /home/archlinuxjp/Projects/azn-project/api/target/debug/build/thiserror-7399ea59ce3845b2/out/private.rs
+
+/home/archlinuxjp/Projects/azn-project/api/target/debug/deps/libthiserror-62e0fa765ea3bd10.rmeta: /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs /home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs /home/archlinuxjp/Projects/azn-project/api/target/debug/build/thiserror-7399ea59ce3845b2/out/private.rs
+
+/home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/lib.rs:
+/home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/aserror.rs:
+/home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/display.rs:
+/home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/var.rs:
+/home/archlinuxjp/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.18/src/private.rs:
+/home/archlinuxjp/Projects/azn-project/api/target/debug/build/thiserror-7399ea59ce3845b2/out/private.rs:
+
+# env-dep:OUT_DIR=/home/archlinuxjp/Projects/azn-project/api/target/debug/build/thiserror-7399ea59ce3845b2/out

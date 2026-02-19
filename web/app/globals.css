@@ -1,0 +1,15 @@
+
+@import "tailwindcss";
+:root{
+  --bg: #050505;
+  --fg: #f2f2f2;
+  --muted: #a1a1aa;
+  --line: rgba(244,244,245,.18);
+  --copper: #b87333;
+
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html, body { background: var(--bg); color: var(--fg); }
+::selection { background: color-mix(in oklab, var(--copper) 55%, black); color: white; }

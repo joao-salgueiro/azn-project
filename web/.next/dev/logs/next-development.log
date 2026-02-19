@@ -1,0 +1,70 @@
+[00:00:01.474] Server  LOG     ✓ Ready in 1223ms
+[00:00:47.144] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:17.653] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:19.952] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:20.493] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:33.402] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:26.810] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:39:27.966] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:47:49.488] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:59.631] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:41.166] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:56:33.825] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:28.445] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:32:26.191] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:33:14.381] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:52:12.491] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:53:14.261] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:06:27.395] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:11:51.447] Server  ERROR   ⨯ ./app/a/[id]/page.tsx
+Module parse failed: Identifier 'artefato' has already been declared (24:11)
+|     ]);
+|     // const original = artefatosMock.find((a) => a.id === id); //javascript puro buscando o artefato pelo id do params (URL)
+>     const [artefato, setArtefato] = useState(original); //useState é um recipiente de memória do React.
+|     const [erro, setErro] = useState(null); //typescript + react  / guarda um mensagem de erro ou nada 
+|     if (!artefato) {
+
+Import trace for requested module:
+./app/a/[id]/page.tsx
+[02:11:52.395] Browser ERROR   ./app/a/[id]/page.tsx
+Module parse failed: Identifier 'artefato' has already been declared (24:11)
+|     ]);
+|     // const original = artefatosMock.find((a) => a.id === id); //javascript puro buscando o artefato pelo id do params (URL)
+>     const [artefato, setArtefato] = useState(original); //useState é um recipiente de memória do React.
+|     const [erro, setErro] = useState(null); //typescript + react  / guarda um mensagem de erro ou nada 
+|     if (!artefato) {
+
+Import trace for requested module:
+./app/a/[id]/page.tsx
+[02:11:52.395] Browser ERROR   ./app/a/[id]/page.tsx
+Module parse failed: Identifier 'artefato' has already been declared (22:11)
+|     ]);
+|     // const original = artefatosMock.find((a) => a.id === id); //javascript puro buscando o artefato pelo id do params (URL)
+>     const [artefato, setArtefato] = useState(original); //useState é um recipiente de memória do React.
+|     const [erro, setErro] = useState(null); //typescript + react  / guarda um mensagem de erro ou nada 
+|     if (!artefato) {
+
+Import trace for requested module:
+./app/a/[id]/page.tsx
+[02:11:56.675] Browser ERROR   ./app/a/[id]/page.tsx
+Module parse failed: Identifier 'artefato' has already been declared (24:11)
+|     ]);
+|     // const original = artefatosMock.find((a) => a.id === id); //javascript puro buscando o artefato pelo id do params (URL)
+>     const [artefato, setArtefato] = useState(original); //useState é um recipiente de memória do React.
+|     const [erro, setErro] = useState(null); //typescript + react  / guarda um mensagem de erro ou nada 
+|     if (!artefato) {
+
+Import trace for requested module:
+./app/a/[id]/page.tsx
+[02:13:22.189] Browser ERROR   unhandledRejection: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+[02:13:22.189] Browser ERROR   unhandledRejection: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+[02:14:07.240] Browser ERROR   unhandledRejection: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+[02:14:07.240] Browser ERROR   unhandledRejection: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+[02:14:11.099] Browser ERROR   unhandledRejection: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+[02:14:11.099] Browser ERROR   unhandledRejection: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+[02:14:13.434] Browser ERROR   unhandledRejection: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+[02:14:13.434] Browser ERROR   unhandledRejection: SyntaxError: JSON.parse: unexpected end of data at line 1 column 1 of the JSON data
+[02:19:39.744] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:23:58.374] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:28:51.236] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:37:18.178] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
