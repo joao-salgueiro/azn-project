@@ -38,4 +38,13 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# Rust build artifacts
+/api/target/
+
+# Node.js dependencies (web)
+/web/node_modules/
+
+# Next.js build output (web)
+/web/.next/
 next-env.d.ts
