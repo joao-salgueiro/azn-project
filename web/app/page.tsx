@@ -10,7 +10,7 @@ import type {
 type ApiArtefato = {
   id?: number;
   titulo: string;
-  descricao?: string;
+  resumo?: string;
   conteudo?: string;
   estado?: string;
   criado_em: string;
@@ -32,7 +32,7 @@ export default function Home() {
         const normalized: Artefato[] = data.map((a, index) => ({
         id: String(a.id ?? index),
         titulo: a.titulo,
-        resumo: a.descricao,
+        resumo: a.resumo,
         conteudo: a.conteudo ?? "",
         imagemCapa: (a as any).imagem_capa,
         estado: (a.estado ?? "rascunho") as EstadoArtefato,

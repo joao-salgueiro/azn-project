@@ -247,7 +247,6 @@
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-zinc-100: oklch(96.7% 0.001 286.375);
-    --color-zinc-200: oklch(92% 0.004 286.32);
     --color-zinc-400: oklch(70.5% 0.015 286.067);
     --color-zinc-500: oklch(55.2% 0.016 285.938);
     --color-zinc-800: oklch(27.4% 0.006 286.033);
@@ -260,8 +259,6 @@
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
-    --text-base: 1rem;
-    --text-base--line-height: calc(1.5 / 1);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
@@ -279,7 +276,6 @@
     --tracking-tight: -0.025em;
     --tracking-widest: 0.1em;
     --leading-tight: 1.25;
-    --leading-relaxed: 1.625;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -450,23 +446,11 @@
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
   }
-  .mt-8 {
-    margin-top: calc(var(--spacing) * 8);
-  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
-  }
-  .mt-20 {
-    margin-top: calc(var(--spacing) * 20);
-  }
-  .mt-70 {
-    margin-top: calc(var(--spacing) * 70);
-  }
-  .mb-10 {
-    margin-bottom: calc(var(--spacing) * 10);
   }
   .line-clamp-2 {
     overflow: hidden;
@@ -480,17 +464,11 @@
   .flex {
     display: flex;
   }
-  .h-200 {
-    height: calc(var(--spacing) * 200);
-  }
   .max-h-\[500px\] {
     max-height: 500px;
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-200 {
-    width: calc(var(--spacing) * 200);
   }
   .w-full {
     width: 100%;
@@ -567,12 +545,6 @@
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
   }
-  .text-center {
-    text-align: center;
-  }
-  .text-justify {
-    text-align: justify;
-  }
   .font-mono {
     font-family: var(--font-mono);
   }
@@ -587,14 +559,6 @@
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
-  }
-  .text-base {
-    font-size: var(--text-base);
-    line-height: var(--tw-leading, var(--text-base--line-height));
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -611,10 +575,6 @@
   .leading-\[0\.95\] {
     --tw-leading: 0.95;
     line-height: 0.95;
-  }
-  .leading-relaxed {
-    --tw-leading: var(--leading-relaxed);
-    line-height: var(--leading-relaxed);
   }
   .leading-tight {
     --tw-leading: var(--leading-tight);
@@ -636,17 +596,11 @@
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
   }
-  .whitespace-pre-line {
-    white-space: pre-line;
-  }
   .text-red-500 {
     color: var(--color-red-500);
   }
   .text-zinc-100 {
     color: var(--color-zinc-100);
-  }
-  .text-zinc-200 {
-    color: var(--color-zinc-200);
   }
   .text-zinc-400 {
     color: var(--color-zinc-400);
