@@ -1,12 +1,25 @@
-version: "3.9"
-
 services:
-  web:
-    image: azn-web
-    build: .
+  db:
+    image: postgres:16
+    environment:
+      PGTZ: America/Sao_Paulo
+      POSTGRES_USER: azn
+      POSTGRES_PASSWORD: azn
+      POSTGRES_DB: azn
     ports:
-      - "3000:3000"
+      - "5432:5432"
     volumes:
-      - .:/app
-      - /app/node_modules
-    command: npm run dev
+      - azn_pg:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: ./api
+    environment:
+      DATABASE_URL: postgres://azn:azn@db:5432/azn
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+volumes:
+  azn_pg:

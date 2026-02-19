@@ -21,7 +21,7 @@ export function ArtefatoCard({ artefato }: { artefato: Artefato }) {
       </h2>
 
       <p className="mt-3 text-sm text-zinc-400 line-clamp-2">
-        {artefato.conteudo}
+        {artefato.resumo}
       </p>
     </Link>
   );

@@ -7,7 +7,9 @@ export type EstadoArtefato =
 export type Artefato = {
   id: string;
   titulo: string;
+  resumo?: string;
   conteudo: string;
-  estado: EstadoArtefato;
-  criadoEm: string; 
+  imagemCapa?: string;
+  estado: string;
+  criadoEm: string;
 };
