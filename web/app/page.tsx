@@ -24,7 +24,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchArtefatos() {
       try {
-        const response = await fetch("http://localhost:8080/artefatos");
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/artefatos`);
         if (!response.ok) throw new Error("Erro ao buscar artefatos");
 
         const data: ApiArtefato[] = await response.json();

@@ -21,7 +21,13 @@ export function ArtefatoCard({ artefato }: { artefato: Artefato }) {
       </h2>
 
       <p className="mt-3 text-sm text-zinc-400 line-clamp-2">
-        {artefato.resumo}
+        {artefato.imagemCapa ? (
+          <img
+            src={artefato.imagemCapa}
+            alt={artefato.titulo}
+            className="mt-3 w-full object-cover rounded-md"
+          />
+        ) : null}
       </p>
     </Link>
   );
