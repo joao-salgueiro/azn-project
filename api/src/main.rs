@@ -31,6 +31,17 @@ struct Artefato {
     criado_em: chrono::NaiveDateTime,
 }
 
+#[derive(Serialize, FromRow)]
+struct AboutResponse {
+    content: String,
+}
+
+#[derive(Serialize, FromRow)]
+struct SocialResponse {
+    github: Option<String>,
+    linkedin: Option<String>,
+}
+
 
 #[derive(Clone)]
 struct AppState {
@@ -80,6 +91,40 @@ async fn buscar_artefato_por_id(
 }
 
 
+async fn get_about(
+    State(state): State<AppState>,
+) -> Result<Json<AboutResponse>, axum::http::StatusCode> {
+    let about_info = sqlx::query_as::<_, AboutResponse>(
+        r#"
+        SELECT content
+        FROM about
+        LIMIT 1
+        "#
+    )
+    .fetch_one(&state.db)
+    .await
+    .map_err(|_| axum::http::StatusCode::INTERNAL_SERVER_ERROR)?;
+
+    Ok(Json(about_info))
+}
+
+async fn get_social(
+    State(state): State<AppState>,
+) -> Result<Json<SocialResponse>, axum::http::StatusCode> {
+    let social_info = sqlx::query_as::<_, SocialResponse>(
+        r#"
+        SELECT github, linkedin
+        FROM social
+        LIMIT 1
+        "#
+    )
+    .fetch_one(&state.db)
+    .await
+    .map_err(|_| axum::http::StatusCode::INTERNAL_SERVER_ERROR)?;
+
+    Ok(Json(social_info))
+}
+
 
 
 async fn health() -> Json<HealthResponse> {
@@ -110,13 +155,15 @@ async fn main() {
         .route("/health", get(health))
         .route("/artefatos", get(listar_artefatos))
         .route("/artefatos/:id", get(buscar_artefato_por_id))
-        .with_state(AppState { db: pool } )
-        .layer(cors);
+        .route("/about", get(get_about))
+        .route("/social", get(get_social))
+        .layer(cors)
+        .with_state(AppState { db: pool });
 
     let listener = tokio::net::TcpListener::bind("0.0.0.0:8080")
         .await
         .expect("Falha ao bindar porta 8080");
 
-    println!("API rodando em http://localhost:8080");
+    println!("API rodando em {}", env::var("NEXT_PUBLIC_API_URL").unwrap_or_else(|_| "http://localhost:8080".to_string()));
     axum::serve(listener, app).await.unwrap();
 }

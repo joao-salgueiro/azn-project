@@ -1,6 +1,5 @@
 "use client";
 
-import { podeArquivar, podeCorromper, podeManifestar } from "@/src/domain/regrasArtefato";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 
@@ -24,7 +23,7 @@ export default function ArtefatoPage() {
   useEffect(() => {
     if (!id) return;
 
-    fetch(`http://localhost:8080/artefatos/${id}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/artefatos/${id}`)
       .then(res => {
         if (!res.ok) throw new Error("Não encontrado");
         return res.json();
@@ -81,60 +80,13 @@ export default function ArtefatoPage() {
         )}
 
         <div
-          className="prose prose-invert max-w-none mt-10"
+          className="prose prose-invert max-w-none mt-10 [&>p]:mb-4 [&>h1]:text-4xl [&>h1]:font-bold [&>h1]:mt-8 [&>h1]:mb-4 [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mt-6 [&>h2]:mb-3"
           dangerouslySetInnerHTML={{ __html: artefato.conteudo }}
         />
 
         {erro && (
           <p className="text-red-500 mt-6 text-sm">{erro}</p>
         )}
-
-        <div className="mt-10 flex gap-3 flex-wrap">
-          <button
-            disabled={!podeManifestar(artefato.estado)}
-            onClick={() => {
-              if (!podeManifestar(artefato.estado)) {
-                setErro("Não é possível manifestar neste estado.");
-                return;
-              }
-              setArtefato({ ...artefato, estado: "MANIFESTADO" });
-              setErro(null);
-            }}
-            className="border px-4 py-2 disabled:opacity-30"
-          >
-            Manifestar
-          </button>
-
-          <button
-            disabled={!podeCorromper(artefato.estado)}
-            onClick={() => {
-              if (!podeCorromper(artefato.estado)) {
-                setErro("Somente manifestados podem ser corrompidos.");
-                return;
-              }
-              setArtefato({ ...artefato, estado: "CORROMPIDO" });
-              setErro(null);
-            }}
-            className="border px-4 py-2 disabled:opacity-30"
-          >
-            Corromper
-          </button>
-
-          <button
-            disabled={!podeArquivar(artefato.estado)}
-            onClick={() => {
-              if (!podeArquivar(artefato.estado)) {
-                setErro("Apenas corrompidos podem ser arquivados.");
-                return;
-              }
-              setArtefato({ ...artefato, estado: "ARQUIVADO" });
-              setErro(null);
-            }}
-            className="border px-4 py-2 disabled:opacity-30"
-          >
-            Arquivar
-          </button>
-        </div>
       </div>
     </main>
   );
