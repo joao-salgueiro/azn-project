@@ -3,7 +3,7 @@
 > PT — Plataforma editorial de artefatos digitais.  
 > EN — A digital archive platform for editorial artifacts.
 
-🌐 **Live:** [jpsalgueiro.mooo.com](http://jpsalgueiro.mooo.com)
+🌐 **Live:** (Em reconstrução...)
 
 ---
 
